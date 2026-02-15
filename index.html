@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پورتال جامع دکتری | دکتر مهیا کهندل</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --main-color: #00d2ff;
+            --secondary-color: #3a7bd5;
+            --dark-blue: #001f3f;
+            --soft-white: #f8fbff;
+            --gold-accent: #ffb400;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { background: var(--soft-white); overflow-x: hidden; }
+
+        /* Top Bar */
+        .top-bar { background: var(--dark-blue); color: white; padding: 10px 5%; display: flex; justify-content: space-between; font-size: 0.8rem; }
+
+        /* Modern Navigation */
+        nav { background: rgba(255, 255, 255, 0.95); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px); }
+        .logo { font-size: 1.8rem; font-weight: 900; background: linear-gradient(45deg, var(--main-color), var(--secondary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Hero Section with Animation */
+        .hero { height: 90vh; background: linear-gradient(135deg, rgba(0,31,63,0.9) 0%, rgba(58,123,213,0.8) 100%), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; display: flex; align-items: center; padding: 0 10%; color: white; }
+        .hero-content h1 { font-size: 4rem; margin-bottom: 20px; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+        .hero-content p { font-size: 1.3rem; max-width: 600px; margin-bottom: 30px; opacity: 0.9; }
+
+        /* Floating Booking Box */
+        .booking-container { max-width: 1200px; margin: -80px auto 50px; padding: 0 20px; position: relative; z-index: 10; }
+        .booking-box { background: white; border-radius: 25px; padding: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; }
+        
+        /* Services Section */
+        .services { padding: 80px 5%; text-align: center; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
+        .service-card { background: white; padding: 40px; border-radius: 20px; transition: 0.4s; border-bottom: 4px solid transparent; }
+        .service-card:hover { transform: translateY(-10px); border-bottom-color: var(--main-color); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .service-card i { font-size: 3rem; color: var(--main-color); margin-bottom: 20px; }
+
+        /* Appointment Table (Ultra Design) */
+        .schedule-wrap { background: var(--dark-blue); color: white; padding: 60px 5%; border-radius: 40px; margin: 50px 5%; }
+        .schedule-table { width: 100%; border-spacing: 0 15px; border-collapse: separate; }
+        .schedule-table tr { background: rgba(255,255,255,0.05); border-radius: 15px; }
+        .schedule-table td { padding: 20px; text-align: center; }
+        .status-badge { background: var(--gold-accent); color: black; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.8rem; }
+
+        /* Testimonials Section */
+        .reviews { padding: 80px 5%; background: #eef2f7; }
+        .review-card { background: white; padding: 30px; border-radius: 20px; margin: 10px; position: relative; }
+        .quote-icon { position: absolute; top: 20px; left: 20px; font-size: 2rem; color: #eee; }
+
+        /* Footer */
+        footer { background: #000c1a; color: white; padding: 80px 5% 20px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; }
+        .social-links a { color: white; font-size: 1.5rem; margin-left: 15px; transition: 0.3s; }
+        .social-links a:hover { color: var(--main-color); }
+
+        /* Custom Button */
+        .btn-premium { background: linear-gradient(45deg, var(--main-color), var(--secondary-color)); color: white; padding: 15px 35px; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; transition: 0.5s; box-shadow: 0 10px 20px rgba(0,210,255,0.3); }
+        .btn-premium:hover { letter-spacing: 1px; box-shadow: 0 15px 30px rgba(0,210,255,0.5); }
+
+        @media (max-width: 768px) { .hero-content h1 { font-size: 2.5rem; } .booking-box { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div><i class="fas fa-phone"></i> ۰۲۱-۱۲۳۴۵۶۷۸ | <i class="fas fa-envelope"></i> info@drkahandel.com</div>
+        <div>نوبت‌دهی آنلاین ۲۴ ساعته</div>
+    </div>
+
+    <nav>
+        <div class="logo">DR. KOHANDEL</div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content animate__animated animate__fadeInRight">
+            <h1>دکتر مهیا کهندل</h1>
+            <p>متخصص برتر در جراحی‌های نوین و مراقبت‌های ویژه پزشکی. لبخند رضایت شما، بزرگترین هدف تیم درمانی ماست.</p>
+            <button class="btn-premium">مشاهده گالری نتایج</button>
+        </div>
+    </section>
+
+    <div class="booking-container">
+        <form class="booking-box animate__animated animate__fadeInUp">
+            <div class="input-group">
+                <label><i class="fas fa-user"></i> نام بیمار</label>
+                <input type="text" style="width:100%; padding:10px; margin-top:10px; border-radius:8px; border:1px solid #ddd;" placeholder="نام خود را وارد کنید">
+            </div>
+            <div class="input-group">
+                <label><i class="fas fa-stethoscope"></i> بخش تخصصی</label>
+                <select style="width:100%; padding:10px; margin-top:10px; border-radius:8px; border:1px solid #ddd;">
+                    <option>ویزیت تخصصی</option>
+                    <option>جراحی زیبایی</option>
+                    <option>مشاوره درمانی</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label><i class="fas fa-calendar-day"></i> انتخاب روز</label>
+                <input type="date" style="width:100%; padding:10px; margin-top:10px; border-radius:8px; border:1px solid #ddd;">
+            </div>
+            <button type="button" class="btn-premium">تایید و رزرو نوبت</button>
+        </form>
+    </div>
+
+    <section class="services">
+        <h2 style="font-size: 2.5rem; color: var(--dark-blue);">خدمات تخصصی ما</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <i class="fas fa-microscope"></i>
+                <h3>تشخیص دقیق</h3>
+                <p>استفاده از مدرن‌ترین دستگاه‌های تصویربرداری و آزمایشگاهی روز دنیا.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-user-nurse"></i>
+                <h3>کادر مجرب</h3>
+                <p>تیمی از بهترین پرستاران و دستیاران برای رفاه حال شما عزیزان.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-pills"></i>
+                <h3>مشاوره دارویی</h3>
+                <p>ارائه دقیق‌ترین پروتکل‌های دارویی برای بهبودی سریع‌تر.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="schedule-wrap">
+        <h2 style="text-align: center; margin-bottom: 40px;">زمان‌بندی حضور دکتر در مطب</h2>
+        <table class="schedule-table">
+            <tr><td>شنبه</td><td>۱۶:۰۰ - ۲۱:۰۰</td><td><span class="status-badge">ظرفیت تکمیل</span></td></tr>
+            <tr><td>یکشنبه</td><td>۱۶:۰۰ - ۲۱:۰۰</td><td><span class="status-badge" style="background: #00ff88;">قابل رزرو</span></td></tr>
+            <tr><td>دوشنبه</td><td>۱۶:۰۰ - ۲۱:۰۰</td><td><span class="status-badge" style="background: #00ff88;">قابل رزرو</span></td></tr>
+            <tr><td>چهارشنبه</td><td>۱۷:۰۰ - ۲۲:۰۰</td><td><span class="status-badge" style="background: #00ff88;">قابل رزرو</span></td></tr>
+        </table>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div>
+                <h3 style="color: var(--main-color); margin-bottom: 20px;">دکتر مهیا کهندل</h3>
+                <p>ما متعهد هستیم که بهترین تجربه درمانی را برای شما فراهم کنیم. اعتماد شما افتخار ماست.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px;">دسترسی سریع</h4>
+                <p>سوالات متداول</p>
+                <p>قوانین مطب</p>
+                <p>همکاری با ما</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px;">آدرس روی نقشه</h4>
+                <p>تهران، بلوار سعادت‌آباد، خیابان سرو غربی، مجتمع پزشکی کاج</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>تمام حقوق مادی و معنوی این پورتال متعلق به دکتر مهیا کهندل می‌باشد. | مدیر اجرایی: مهران</p>
+        </div>
+    </footer>
+
+</body>
+</html>
